@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Caça-palavras</title>
+<style>
+	h1{
+		color:blue;
+		font-size:30px;
+	} 
+    /**/
+	h2{
+		color:#757575;
+		font-size:20px;
+	}
+	h1, h2{
+		text-align:center;
+	}
+	p{
+		font-size:15px;
+		margin:0;
+	}
+	body{
+		background-color:yellow;
+	}
+	#dicas{
+		overflow-y:scroll;
+		height:90%;
+		width:25%;
+		text-align: justify;
+		padding:1% 1% 2% 3%;
+		font-size:.8em;
+		position:fixed;
+		margin:0 0 0 1%;
+		top:.5%;
+		background-color: #F5F5F5;
+	}
+	#dicas li{
+		margin:.5%;
+	}
+	@media only screen and (max-width:639px){
+		#dicas{
+			overflow:unset;
+			height:auto;
+			margin:auto;
+			width:95%;
+			position:relative;
+		}
+	}
+	html, body{
+		margin:0;
+		padding:0;
+		background-color: #4CAF50;
+	}
+	table{
+		width:25%;
+	}
+	table, tr, td{
+		border: 1px solid black;
+		background-color: white;
+	}
+
+	td{
+		font-weight: bold;
+		font-family: monospace;
+		font-size: 1.6em;
+		color: black;
+	}
+
+	td:hover{
+		background-color: #F9D387;
+		cursor: pointer;
+	}
+
+	.selecionada, .encontrada, .errado{
+		transition:.2s linear;
+	}
+	.selecionada{
+		background-color: lightblue;
+	}
+	.encontrada{
+		background-color: #009688;
+	}
+
+	.errado{
+		color: red;
+	}
+
+	#iniciar{
+		padding: 6%;
+		background-color: lightgrey;
+	}
+
+	#jogo{
+		text-align: center;
+	}
+
+	#btnPlay{
+		margin:auto;
+		display: block;
+	}
+
+	#parabens{
+		margin: auto;
+		text-align: center;
+		color: #FF5722;
+		transition: .2s linear 2s;
+		position:absolute;
+		top:50%;
+		left:0;
+		right:0;
+	}
+
+	#btnVoltar{
+		margin: auto;
+	}
+
+	button{
+		border:1px solid white;
+		outline:none;
+		background-color:lightblue;
+		transition:.2s linear;
+		font-weight:bold;
+		padding:1% 2%;
+		color:white;
+	}
+
+	button:hover{
+		border:1px solid lightblue;
+		outline:none;
+		color:lightblue;
+		background-color:white;
+	}
+</style>
+</head>
+<body>
+<div id="iniciar">
+	<h1>Caça-palavras</h1>
+	<button id="btnPlay">
+		<img src="image.png" width="largura aqui" height="altura aqui" alt="Jogar">
+	</button>
+</div>
+<div id="jogo" hidden>
+	<h2 hidden id="parabens">Parabéns!</h2>
+	<button hidden id="btnVoltar">voltar</button>
+	<h2>Meios de transportes</h2>
+	<p id="encontradas"></p>
+	<ol id="dicas">
+		<h4 style="text-align:center;">Dicas</h4>
+		<li>É um meio de transporte terrestre que, geralmente, cabe cinco pessoas.</li>
+		<li>É um meio de transporte sob duas rodas.</li>
+		<li>É um meio de transporte com vários vagões ligados entre si e pode transportar pessoas ou cargas.</li>
+		<li>É um meio de transporte terrestre que passa por túneis subterrâneos ou por viadutos e realiza a parada em estações designadas.
+		<li>Meio de transporte usado para pedalar em pistas, ciclovias ou parques.</li>
+		<li>É um meio de transporte terrestre grande, com eixos dianteiros e traseiros, geralmente tem entre quatro e dezesseis rodas e, tem uma carreta.</li>
+		<li>Meio de transporte aquático que tem vela, começa com a letra B e tem cinco letras.</li>
+		<li>Meio de transporte aquático que afundou no filme Titanic.</li>
+		<li>Meio de transporte aquático que fica abaixo da água, pode flutuar sob a água e começa com a letra S.</li>
+		<li>Meio de transporte aéreo que tem duas asas, voa e começa com a letra A.</li>
+		<li>Meio de transporte aéreo que tem hélice e começa com a letra H.</li>
+		<li>Meio de transporte aéreo que tem cesto,  é movido a ar e começa com a letra B.</li>
+	</ol>
+	<table id="tabuleiro" align="center">
+	<tr>
+		<td>Ã</td>
+		<td>Ê</td>
+		<td>O</td>
+		<td>O</td>	
+		<td>Ã</td>	
+		<td>O</td>	
+		<td>F</td>	
+		<td>C</td>	
+		<td>A</td>	
+		<td>R</td>	
+		<td>R</td>	
+		<td>O</td>
+	</tr>
+	<tr>
+		<td>J</td>	
+		<td>K</td>	
+		<td>S</td>	
+		<td>Ã</td>	
+		<td>B</td>	
+		<td>D</td>	
+		<td>L</td>	
+		<td>T</td>	
+		<td>G</td>	
+		<td>W</td>	
+		<td>H</td>	
+		<td>Ô</td>
+	</tr>
+	<tr>	
+		<td>C</td>	
+		<td>A</td>	
+		<td>M</td>	
+		<td>I</td>	
+		<td>N</td>	
+		<td>H</td>	
+		<td>Ã</td>	
+		<td>O</td>	
+		<td>X</td>	
+		<td>Z</td>	
+		<td>E</td>	
+		<td>B</td>
+	</tr>
+	<tr>	
+		<td>H</td>	
+		<td>E</td>	
+		<td>L</td>	
+		<td>V</td>	
+		<td>Ç</td>	
+		<td>O</td>	
+		<td>B</td>	
+		<td>Q</td>	
+		<td>I</td>	
+		<td>M</td>	
+		<td>L</td>	
+		<td>I</td>
+	</tr>
+	<tr>	
+		<td>N</td>	
+		<td>A</td>	
+		<td>B</td>	
+		<td>A</td>	
+		<td>L</td>	
+		<td>Ã</td>	
+		<td>O</td>	
+		<td>L</td>	
+		<td>H</td>	
+		<td>O</td>	
+		<td>I</td>	
+		<td>C</td>
+	</tr>
+	<tr>	
+		<td>T</td>	
+		<td>B</td>	
+		<td>M</td>	
+		<td>E</td>	
+		<td>T</td>	
+		<td>R</td>	
+		<td>Ô</td>	
+		<td>T</td>	
+		<td>N</td>	
+		<td>X</td>	
+		<td>C</td>	
+		<td>I</td>
+	</tr>
+	<tr>	
+		<td>R</td>	
+		<td>L</td>	
+		<td>Ã</td>	
+		<td>O</td>	
+		<td>J</td>	
+		<td>K</td>	
+		<td>Ç</td>	
+		<td>Y</td>	
+		<td>A</td>	
+		<td>R</td>	
+		<td>Ó</td>	
+		<td>C</td>
+	</tr>
+	<tr>	
+		<td>E</td>	
+		<td>O</td>	
+		<td>B</td>	
+		<td>A</td>	
+		<td>R</td>	
+		<td>C</td>	
+		<td>O</td>	
+		<td>F</td>	
+		<td>V</td>	
+		<td>S</td>	
+		<td>P</td>	
+		<td>L</td>
+	</tr>
+	<tr>	
+		<td>M</td>	
+		<td>Ã</td>	
+		<td>O</td>	
+		<td>H</td>	
+		<td>E</td>	
+		<td>L</td>	
+		<td>S</td>	
+		<td>U</td>	
+		<td>I</td>	
+		<td>B</td>	
+		<td>T</td>	
+		<td>E</td>
+	</tr>
+	<tr>	
+		<td>B</td>	
+		<td>I</td>	
+		<td>M</td>	
+		<td>O</td>	
+		<td>T</td>	
+		<td>O</td>	
+		<td>C</td>	
+		<td>A</td>	
+		<td>O</td>	
+		<td>M</td>	
+		<td>E</td>	
+		<td>T</td>
+	</tr>
+	<tr>	
+		<td>F</td>	
+		<td>A</td>	
+		<td>V</td>	
+		<td>I</td>	
+		<td>O</td>	
+		<td>D</td>	
+		<td>H</td>	
+		<td>J</td>	
+		<td>T</td>	
+		<td>O</td>	
+		<td>R</td>	
+		<td>A</td>
+	</tr>
+	<tr>	
+		<td>Q</td>	
+		<td>Ã</td>	
+		<td>S</td>	
+		<td>U</td>	
+		<td>B</td>	
+		<td>M</td>	
+		<td>A</td>	
+		<td>R</td>	
+		<td>I</td>	
+		<td>N</td>	
+		<td>O</td>	
+		<td>Ô</td>
+	</tr>
+</div>
+<script>
+		var t = document.getElementById("tabuleiro");
+		var transportes, primeiroclique, encontradas, data;
+		function clique(e){
+			if(transportes.length > 0){
+				if(primeiroclique == false){
+					data.colunainicial = parseInt(e.target.dataset.index);
+					data.linhainicial = parseInt(e.target.parentElement.dataset.index);
+					data.letrainicial = e.target.innerText;
+					
+					if(e.target.dataset.encontrada == "true"){
+						e.target.classList.replace("encontrada", "selecionada");
+					}else{
+						e.target.classList.add("selecionada");
+					}
+					
+					primeiroclique = true;
+				}else{
+					if(data.colunainicial != parseInt(e.target.dataset.index) && data.linhainicial != parseInt(e.target.parentElement.dataset.index)){
+						return;
+					}
+					
+					data.colunafinal = parseInt(e.target.dataset.index);
+					data.linhafinal = parseInt(e.target.parentElement.dataset.index);
+					data.letrafinal = e.target.innerText;
+					
+					if(data.colunainicial > data.colunafinal){
+						var novacolunainicial = data.colunafinal;
+						var novacolunafinal = data.colunainicial;
+						data.colunainicial = novacolunainicial;
+						data.colunafinal = novacolunafinal;
+					}
+					if(data.linhainicial > data.linhafinal){
+						var novalinhainicial = data.linhafinal;
+						var novalinhafinal = data.linhainicial;
+						data.linhainicial = novalinhainicial;
+						data.linhafinal = novalinhafinal;
+					}
+					
+					primeiroclique = false;
+					
+					if(e.target.dataset.encontrada == "true"){
+						e.target.classList.replace("encontrada", "selecionada");
+					}else{
+						e.target.classList.add("selecionada");
+					}
+					comparar(data);
+				}
+			}
+		}
+		function horizontal(fn){
+			console.log("seleção horizontal");
+			for(var i = data.colunainicial; i < data.colunafinal + 1; i++){
+				var td = t.rows[data.linhainicial].cells[i];
+				if(td.dataset.encontrada == "true"){
+					td.classList.replace("encontrada", "selecionada");
+				}else{
+					td.classList.add("selecionada");
+				}
+				fn(td);
+			}
+		}
+		function vertical(fn){
+			console.log("seleção vertical");
+			for(var i = data.linhainicial; i < data.linhafinal + 1; i++){
+				var td = t.rows[i].cells[data.colunainicial];
+				if(td.dataset.encontrada == "true"){
+					td.classList.replace("encontrada", "selecionada");
+				}else{
+					td.classList.add("selecionada");
+				}
+				fn(td);
+			}
+		}
+		function comparar(data){
+			var selecionados = {
+				palavra:"",
+				elementos:[]
+			};
+			if(data.colunainicial != data.colunafinal && data.linhainicial == data.linhafinal){
+				horizontal(function(td){
+					selecionados.palavra += td.innerText;
+					selecionados.elementos.push(td);
+				});
+			}else if(data.colunainicial == data.colunafinal && data.linhainicial != data.linhafinal){
+				vertical(function(td){
+					selecionados.palavra += td.innerText;
+					selecionados.elementos.push(td);
+				});
+			}
+			//essa linha aqui usei um operador condicional ternário que vai retorna a palavra selecionada, se ela estiver na lista,
+			//caso a palavra esteja invertida, a primeira condição vai dar falso e vai cair na segunda condicional
+			//que vai inverte a palavra e verificar de novo se tem na lista, caso sim vai retorna ela, caso, não achar mesmo invertendo, vai retorna falso
+			//isso é importante para palavras de cabeça para baixo no quebra cabeça
+			var palavraselecionada = transportes.includes(selecionados.palavra) ? selecionados.palavra : transportes.includes(selecionados.palavra.split("").reverse().join("")) ? selecionados.palavra.split("").reverse().join('') : false;
+			if(palavraselecionada){
+				transportes = transportes.filter(function(p){
+					if(palavraselecionada != p){
+						return p;
+					}
+				});
+				setTimeout(function(){
+					for(var i = 0; i < selecionados.elementos.length; i++){
+						var elemento = selecionados.elementos[i];
+						elemento.classList.replace("selecionada", "encontrada");
+						elemento.dataset.encontrada = "true";
+					}
+				}, 1000);
+				encontradas += 1;
+				document.getElementById("encontradas").innerText = "Encontradas: "+encontradas+"\n Restantes: "+ transportes.length;
+				if(transportes.length == 0){
+					setTimeout(function(){
+						document.getElementById("parabens").hidden = false;
+						document.getElementById("btnVoltar").hidden = false;
+					}, 2000);
+				}
+				data = {};
+			}else{
+				data = {};
+				setTimeout(function(){
+					for(var i = 0; i < selecionados.elementos.length; i++){
+						var elemento = selecionados.elementos[i];
+						elemento.classList.replace("selecionada", "errado");
+					}
+					setTimeout(function(){
+						for(var i = 0; i < selecionados.elementos.length; i++){
+							var elemento = selecionados.elementos[i];
+							if(elemento.dataset.encontrada == "true"){
+								elemento.classList.replace("errado", "encontrada");
+							}else{
+								elemento.classList.remove("errado");
+							}
+						}
+					}, 1000);
+				}, 1000);
+			}
+		}
+		
+function iniciaJogo(){
+			transportes=["CARRO", "MOTO","TREM", "METRÔ","BICICLETA", "CAMINHÃO", "BARCO", "NAVIO", "SUBMARINO", "AVIÃO","HELICÓPTERO", "BALÃO"];
+			primeiroclique = false;
+			encontradas = 0;
+			data = {};
+			document.getElementById("encontradas").innerText = "Encontradas: "+encontradas+"\n Restantes: "+ transportes.length;
+			for(var i = 0; i < t.rows.length; i++){
+				t.rows[i].id = "linha " + i;
+				t.rows[i].dataset.index = i;
+				for(var j = 0; j < t.rows[i].cells.length; j++){
+					t.rows[i].cells[j].classList = [];
+					t.rows[i].cells[j].dataset.encontrada = "false";
+					t.rows[i].cells[j].id = "coluna " + j;
+					t.rows[i].cells[j].dataset.index = j;
+					t.rows[i].cells[j].addEventListener("click", clique);
+				}
+			}
+			document.getElementById("iniciar").hidden = true;
+			document.getElementById("parabens").hidden = true;
+			document.getElementById("jogo").hidden = false;
+			document.getElementById("btnVoltar").hidden = true;
+		}
+		var btnPlay = document.getElementById("btnPlay");
+		btnPlay.onclick = function(){
+			iniciaJogo();
+		}
+		var btnVoltar = document.getElementById("btnVoltar");
+		btnVoltar.onclick = function(){
+			btnVoltar.hidden = true;
+			document.getElementById("iniciar").hidden = false;
+			document.getElementById("parabens").hidden = true;
+			document.getElementById("jogo").hidden = true;
+		}
+	</script>
+</body>
+
+</html>

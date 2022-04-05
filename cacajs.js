@@ -1,5 +1,5 @@
 (function(){
-
+	
 	var $form = document.querySelector('[data-js="form"]');
 	var $search = document.querySelector('[data-js="search"]');
 	var $tbody = document.querySelector('[data-js="tbody"]');
