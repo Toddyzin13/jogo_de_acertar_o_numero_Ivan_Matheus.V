@@ -23,22 +23,3 @@ tecnologias utilizadas
 -BootStrap Não foi utilizado
 
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
-
-disponivel em:
-
-                ◥◣❤◢◤
-
-        ◥◣❤◢◤
-
-  ◥◣❤◢◤
-◥◣❤◢◤
-
-笠GitHub笠
-
-◥◣❤◢◤
-
- ◥◣❤◢◤
-
-       ◥◣❤◢◤
-
-              ◥◣❤◢◤
