@@ -6,6 +6,7 @@ Um projeto de acertar o número do dia sem nenhuma dica além da aproximação.
 ===========================================================================
 
 ##Tecnologias utilizadas
+
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
 
 -HTML Estrutura do Site.
