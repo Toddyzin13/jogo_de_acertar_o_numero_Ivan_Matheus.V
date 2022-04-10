@@ -1,7 +1,7 @@
-# jogo_da_velha_Ivan_Matheus.V
+# jogo_da_adivinhe_o_número_Ivan_Matheus.V
 ============================================================================================
 
-Um projeto de jogo da velha que o usuario usa "X"ou""O" para marcação em um tela de 3 por 3 quadrados.
+Um projeto de adivinhar a palavra do dia sem nenhuma dica além da aproximação.
 
 ============================================================================================
 
