@@ -36,13 +36,14 @@ Alterações feitas
 
 ∎ aumento de tentativas
 
-∎ uso de imagem
-
 
 ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
+link de referencia:
 
+https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash
 
 imagem do jogo:
-![Tela do jogo](/img/Jogo_ganho.jpeg)
 
 ![Tela do jogo](/img/Jogo_novo.jpeg)
+
+![Tela do jogo](/img/Jogo_ganho.jpeg)
