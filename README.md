@@ -23,6 +23,7 @@ tecnologias utilizadas
 -BootStrap Não foi utilizado
 
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
+
  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  
 Alterações feitas
  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
