@@ -1,4 +1,4 @@
-var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+var numeroAleatorio = Math.floor(Math.random() * 5000) + 1;
 var palpites = document.querySelector('.palpites');
 var ultimoResultado = document.querySelector('.ultimoResultado');
 var baixoOuAlto = document.querySelector('.baixoOuAlto');
@@ -14,11 +14,11 @@ function conferirPalpite() {
     }
     palpites.textContent += palpiteUsuario + ' ';
     if (palpiteUsuario === numeroAleatorio) {
-        ultimoResultado.textContent = 'Parabéns! Você acertou!';
+        ultimoResultado.textContent = 'AAAAAAAAAEEEEEEEEEE KRL!!!!!!!! ACERTAMO';
         ultimoResultado.style.backgroundColor = 'green';
         baixoOuAlto.textContent = '';
         configFimDeJogo();
-    } else if (contagemPalpites === 10) {
+    } else if (contagemPalpites === 20) {
         ultimoResultado.textContent = '!!!FIM DE JOGO!!!';
         baixoOuAlto.textContent = '';
         configFimDeJogo();
@@ -56,5 +56,5 @@ function reiniciarJogo() {
     campoPalpite.value = '';
     campoPalpite.focus();
     ultimoResultado.style.backgroundColor = 'white';
-    numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    numeroAleatorio = Math.floor(Math.random() * 5000) + 1;
 }
