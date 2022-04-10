@@ -43,3 +43,4 @@ Alterações feitas
 
 
 imagem do jogo:
+![Tela do jogo](/img/jogo.jpeg)
