@@ -1,4 +1,4 @@
-# jogo_das_palavras_Ivan_Matheus.V
+# jogo_da_velha_Ivan_Matheus.V
 ============================================================================================
 
 Um projeto de caça palavra que o usuario busca palavras escondidas no meio de outras.
