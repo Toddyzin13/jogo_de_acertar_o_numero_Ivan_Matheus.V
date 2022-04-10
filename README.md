@@ -5,7 +5,7 @@ Um projeto de acertar o número do dia sem nenhuma dica além da aproximação.
 
 ===========================================================================
 
-##Tecnologias utilizadas
+## Tecnologias utilizadas
 
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
 
@@ -27,7 +27,7 @@ Um projeto de acertar o número do dia sem nenhuma dica além da aproximação.
 
  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  
  
-Alterações feitas
+## Alterações feitas
 
  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
 
@@ -40,11 +40,11 @@ Alterações feitas
 
 ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
 
-##Link de referencia:
+## Link de referencia:
 
 https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash
 
-##Imagem do jogo:
+## Imagem do jogo:
 
 ![Tela do jogo](/img/Jogo_novo.jpeg)
 
