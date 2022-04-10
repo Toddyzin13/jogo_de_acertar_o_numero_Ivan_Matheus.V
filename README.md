@@ -1,11 +1,11 @@
-# jogo_de_acertar_o_número_Ivan_Matheus.V
+# Jogo_de_acertar_o_número_Ivan_Matheus.V
 ===========================================================================
 
 Um projeto de acertar o número do dia sem nenhuma dica além da aproximação.
 
 ===========================================================================
 
-tecnologias utilizadas
+##Tecnologias utilizadas
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
 
 -HTML Estrutura do Site.
@@ -39,11 +39,11 @@ Alterações feitas
 
 ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
 
-link de referencia:
+##Link de referencia:
 
 https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash
 
-imagem do jogo:
+##Imagem do jogo:
 
 ![Tela do jogo](/img/Jogo_novo.jpeg)
 
