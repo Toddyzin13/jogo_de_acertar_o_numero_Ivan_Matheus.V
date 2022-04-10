@@ -23,3 +23,13 @@ tecnologias utilizadas
 -BootStrap Não foi utilizado
 
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
+ ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  
+Alterações feitas
+ ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
+
+∎ mudança para quantidade de números ,aceito
+∎ mudança no estilo visual do jogo
+∎ aumento de tentativas
+∎ uso de imagem
+
+⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
