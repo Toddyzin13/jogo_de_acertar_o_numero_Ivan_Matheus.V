@@ -1,22 +1,22 @@
 # jogo_das_palavras_Ivan_Matheus.V
 ============================================================================================
 
-um projeto de caça palavra que o usuario busca palavras escondidas no meio de outras.
+Um projeto de caça palavra que o usuario busca palavras escondidas no meio de outras.
 
 ============================================================================================
 
 tecnologias utilizadas
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
 
--html Estrutura do Site
+-HTML Estrutura do Site.
 
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
 
--css Estilos do Site
+-CSS Estilos do Site
 
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
 
--js Funções do Site
+-JS Funções do Site
 
 ◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
 
