@@ -1,4 +1,4 @@
-# jogo_da_acertar_o_número_Ivan_Matheus.V
+# jogo_de_acertar_o_número_Ivan_Matheus.V
 ===========================================================================
 
 Um projeto de acertar o número do dia sem nenhuma dica além da aproximação.
