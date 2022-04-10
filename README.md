@@ -1,7 +1,7 @@
-# jogo_da_adivinhe_a_palavra_Ivan_Matheus.V
+# jogo_da_adivinhe_o_número_Ivan_Matheus.V
 ============================================================================
 
-Um projeto de adivinhar a palavra do dia sem nenhuma dica além da aproximação.
+Um projeto de adivinhar o número do dia sem nenhuma dica além da aproximação.
 
 ============================================================================
 
