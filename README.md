@@ -30,9 +30,13 @@ Alterações feitas
 
  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
 
-∎ mudança para quantidade de números ,aceito
+∎ mudança para quantidade de números
+
 ∎ mudança no estilo visual do jogo
+
 ∎ aumento de tentativas
+
 ∎ uso de imagem
+
 
 ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
