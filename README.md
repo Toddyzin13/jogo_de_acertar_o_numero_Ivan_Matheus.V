@@ -40,7 +40,7 @@ Um projeto de acertar o número do dia sem nenhuma dica além da aproximação.
 
 ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫  ⧫ 
 
-link do jogo:
+## link do jogo:
 
  https://toddyzin13.github.io/jogo_de_acertar_o_numero_Ivan_Matheus.V/
  
